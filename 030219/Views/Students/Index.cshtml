@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Tələbələr</h2>
+
+<div class="row student-actions">
+    <div class="col-md-12">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#student-modal">
+            Yeni tələbə
+        </button>
+        <table class="table table-bordered mt-3 studentList d-none">
+            <thead>
+                <tr>
+                    <th>Ad</th>
+                    <th>Soyad</th>
+                    <th>Qrup</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+               
+            </tbody>
+        </table>
+        <div class="loader">
+            <i class="fas fa-spinner"></i>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" data-type="create" id="student-modal" tabindex="-1" role="dialog" aria-labelledby="student-formLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Yeni Tələbə</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="student-form" data-type="create">
+                    <div class="form-group">
+                        <label for="Name">Ad</label>
+                        <input type="text" class="form-control" name="Name" id="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Surname">Soyad</label>
+                        <input type="text" class="form-control" name="Surname" id="Surname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="GroupId">Qrup</label>
+                        <select name="GroupId" id="GroupId" class="form-control"></select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Bağla</button>
+                <button type="button" id="modal-action" class="btn btn-primary">Əlavə et</button>
+            </div>
+        </div>
+    </div>
+</div>
+
